@@ -130,7 +130,19 @@ iframe {
 </style>
 
 <body>
-    <iframe src="https://fd7adddd.ngrok.io" target="_top"/>
+    <iframe id="frame" src="https://fd7adddd.ngrok.io" target="_top"/>
 </body>
+	
+<script type="text/javascript">
+    document.getElementById('frame').onload= function() {
+	    
+var currentUrl = document.referrer;
+//const currentIframeHref = new URL(document.location.href);
+//const urlOrigin = currentIframeHref.origin;
+//const urlFilePath = decodeURIComponent(currentIframeHref.pathname);
+document.write(currentUrl);
+	    
+    };
+</script>
 
 </html>
